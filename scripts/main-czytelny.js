@@ -1,24 +1,24 @@
 jQuery(document).ready(onLoadPage);
 function onLoadPage()
 {
-    jQuery("#noweLachony").click(zaciagnijFotki);
+    jQuery("#noweFotki").click(zaciagnijFotki);
     jQuery( ".ramka").draggable();
-    jQuery( "#pasztety").draggable();
+    jQuery( "#kosz").draggable();
     var opcje ={drop :onDropItem};
-    jQuery( "#pasztety" ).droppable(opcje);
+    jQuery( "#kosz" ).droppable(opcje);
 
 }
 function onDropItem( event, ui )
 {
-    var wybranyPasztet=ui.draggable;
-    wybranyPasztet.animate(
+    var wybraneZdjecie=ui.draggable;
+    wybraneZdjecie.animate(
         {
             width:"0px",
             height:"0px",
             opacity:"0"
         },1500,
         function(){
-            wybranyPasztet.hide();
+            wybraneZdjecie.hide();
         }
     );
 }
@@ -36,7 +36,7 @@ function dodajFotki(tablicaSrc)
         ramka.setAttribute("class","ramka");
         var image=document.createElement("img");
         image.setAttribute("src",tablicaSrc[i]);
-        image.setAttribute("class","laska");
+        image.setAttribute("class","fotka");
         ramka.appendChild(image);
         tablicaSrc[i]=ramka;
     }
