@@ -24,7 +24,7 @@ function onDropItem( event, ui )
 }
 function zaciagnijFotki()
 {
-    jQuery.getJSON("api/przykladowefoty").done(dodajFotki).fail(function( jqxhr, textStatus, error ) {
+    jQuery.getJSON("api/przykladowefoty.json").done(dodajFotki).fail(function( jqxhr, textStatus, error ) {
         alert( "Natąpił bład: " + error );
     });
 }

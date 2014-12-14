@@ -1,6 +1,6 @@
 $(document).ready(function(){
         $("#noweFotki").click(function()
-        {$.getJSON("api/przykladowefoty").done(function(data){
+        {$.getJSON("api/przykladowefoty.json").done(function(data){
             for(var i=0;i<data.length;i++){
                 var ramka=document.createElement("div");
                 ramka.setAttribute("class","ramka");
